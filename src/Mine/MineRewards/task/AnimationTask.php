@@ -51,7 +51,7 @@ class AnimationTask extends Task {
             }
         }
         $this->item->getWorld()->addParticle(new HugeExplodeSeedParticle($this->item));
-        $this->item->getWorld()->broadcastLevelSoundEvent($this->item, LevelSoundEventPacket::SOUND_EXPLODE);
+        $this->item->getWorld()->broadcastWorldSoundEvent($this->item, LevelSoundEventPacket::SOUND_EXPLODE);
         $this->item->flagForDespawn();
     }
 }
