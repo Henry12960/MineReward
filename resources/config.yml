@@ -1,12 +1,12 @@
 ---
 # Item ID of the reward
 # This will permanently override the item
-mining-reward-id: 381 # Ender Eye
+mining-reward-id: 264 # Diamond
 
-# Use & for color
-prefix: "&8[&a&lMR&r&8] "
+# Add plugin prefix | Use & for color
+prefix: "&f[&aServer&dName&f] "
 
-# Titles that will be randomized
+# Titles when the player rescues
 titles:
   - "Wow!"
   - "Bonkers!"
@@ -15,7 +15,7 @@ titles:
   - "Awesome!"
   - "Nice!"
 
-# Use & for colors in custom names
+# Customize rewards
 rewards:
   1: # Can be anything
     type: "item"
@@ -32,10 +32,15 @@ rewards:
     command: "give {player} 1 1"
     message: "&aYou've received a reward" # & for color
 
-reward-count-min: 1 # The min amount of rewards a player can get.
-reward-count-max: 5 # The max amount of rewards a player can get.
+# The min amount of rewards a player can get.
+reward-count-min: 1 
 
-chance: 100 # Chance of getting crate for rewards
+# The max amount of rewards a player can get.
+reward-count-max: 5 
 
-lengthOfAnimation: 20 # 4 = 1 second
+# Chance of getting crate for rewards
+chance: 60 
+
+# 4 = 1 second
+lengthOfAnimation: 20 
 ...
