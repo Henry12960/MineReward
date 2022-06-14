@@ -3,5 +3,5 @@ main: Mine\MineRewards\Main
 load: STARTUP
 version: "2.0"
 api: 4.0.0
-authors: [HenryDM, Ihsan65, david]
+authors: [HenryDM, Ihsan65, david, Petter ]
 description: Get rewards while mining
