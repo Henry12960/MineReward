@@ -146,7 +146,7 @@ class Main extends PluginBase {
     }
 
     /**
-     * @return MineR
+     * @return Main
      */
     public static function getInstance(): self {
         return self::$instance;
