@@ -19,7 +19,7 @@ class EventListener implements Listener {
      *
      * @param MineR $plugin
      */
-    public function __construct(MineR $plugin) {
+    public function __construct(Main $plugin) {
         $this->plugin = $plugin;
         $plugin->getServer()->getPluginManager()->registerEvents($this, $plugin);
     }
