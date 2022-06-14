@@ -25,7 +25,7 @@ class Reward extends Item {
      * @return bool
      */
     public function onClickAir(Player $player, Vector3 $directionVector): bool {
-        $itemEntity = $player->getLevel()->dropItem($player->add(0, 3, 0), $this, $directionVector->multiply(0.5), 1000);
+        $itemEntity = $player->getWorld()->dropItem($player->add(0, 3, 0), $this, $directionVector->multiply(0.5), 1000);
         $player->sendMessage(Main::getPrefix() . TextFormat::GREEN . "Opening reward...!");
         $player->getInventory()->setItemInHand($this->pop());
         Main::getInstance()->getScheduler()->scheduleRepeatingTask(new TickTask($player, $itemEntity, Main::getInstance()->getAnimationTickRate()), 5);
