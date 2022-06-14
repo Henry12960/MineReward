@@ -36,7 +36,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\plugin\PluginException;
 use pocketmine\utils\TextFormat;
 
-class MineR extends PluginBase {
+class Main extends PluginBase {
 
     /** @var EventListener */
     public $listener;
