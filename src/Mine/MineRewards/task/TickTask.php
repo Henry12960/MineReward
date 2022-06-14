@@ -2,7 +2,7 @@
 
 namespace Mine\MineRewards\task;
 
-use Mine\MineRewards\Loader;
+use Mine\MineRewards\Main;
 use pocketmine\entity\object\ItemEntity;
 use pocketmine\level\particle\FlameParticle;
 use pocketmine\level\particle\SmokeParticle;
