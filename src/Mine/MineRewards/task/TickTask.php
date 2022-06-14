@@ -41,7 +41,7 @@ class TickTask extends Task {
     /**
      * @param int $currentTick
      */
-    public function onRun(int $currentTick) {
+    public function onRun(int $currentTick) : void {
         $this->runs++;
         $scheduler = Main::getInstance()->getScheduler();
         if($this->entity->isClosed()) {
