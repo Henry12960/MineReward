@@ -7,7 +7,7 @@ use pocketmine\entity\object\ItemEntity;
 use pocketmine\level\particle\FlameParticle;
 use pocketmine\level\particle\SmokeParticle;
 use pocketmine\level\sound\ClickSound;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\scheduler\Task;
 use pocketmine\utils\TextFormat;
 
@@ -60,7 +60,7 @@ class TickTask extends Task {
             $scheduler->scheduleTask(new AnimationTask($this->owner, $this->entity));
             return;
         }
-        $level = $this->entity->getLevel();
+        $level = $this->entity->getWorld();
         $level->addSound(new ClickSound($this->entity->asPosition()));
         $position = $this->entity->asPosition()->add(0, 0.15, 0);
         for($i = 0; $i < 4; $i++) {
