@@ -33,7 +33,7 @@ class EventListener implements Listener {
         }
         if(mt_rand(1, $this->plugin->getChance()) === mt_rand(1, $this->plugin->getChance())) {
             $player = $event->getPlayer();
-            $level = $player->getLevel();
+            $level = $player->getWorld();
             $item = new Reward();
             $lore = [];
             $lore[] = TextFormat::RESET . TextFormat::YELLOW . "Reward Min: " . MineR::getInstance()->getCountMin();
