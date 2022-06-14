@@ -15,7 +15,7 @@ class Reward extends Item {
      * Reward constructor.
      */
     public function __construct() {
-        parent::__construct(MineR::getInstance()->getConfig()->get("mining-reward-id"));
+        parent::__construct(Main::getInstance()->getConfig()->get("mining-reward-id"));
     }
 
     /**
