@@ -8,7 +8,6 @@ use pocketmine\event\Listener;
 use pocketmine\level\particle\HugeExplodeSeedParticle;
 use pocketmine\level\sound\BlazeShootSound;
 use pocketmine\utils\TextFormat;
-use pocketmine\player\Player;
 
 class EventListener implements Listener {
 
