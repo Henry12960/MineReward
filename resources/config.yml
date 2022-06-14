@@ -14,6 +14,7 @@ titles:
   - "Treasure!"
   - "Awesome!"
   - "Nice!"
+  #If you don't have "" it will be a serious error!
 
 # Customize rewards
 rewards:
