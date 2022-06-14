@@ -24,7 +24,7 @@ class Reward extends Item {
      *
      * @return bool
      */
-    public function onClickAir(Player $player, Vector3 $directionVector): bool {
+    public function onClickAir(Player $player, Vector3 $directionVector): void {
         $itemEntity = $player->getWorld()->getFolderName()->dropItem($player->add(0, 3, 0), $this, $directionVector->multiply(0.5), 1000);
         $player->sendMessage(Main::getPrefix() . TextFormat::GREEN . "Opening reward...!");
         $player->getInventory()->setItemInHand($this->pop());
