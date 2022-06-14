@@ -36,8 +36,8 @@ class EventListener implements Listener {
             $level = $player->getWorld()->getFolderName();
             $item = new Reward();
             $lore = [];
-            $lore[] = TextFormat::RESET . TextFormat::YELLOW . "Reward Min: " . MineR::getInstance()->getCountMin();
-            $lore[] = TextFormat::RESET . TextFormat::YELLOW . "Reward Max: " . MineR::getInstance()->getCountMax();
+            $lore[] = TextFormat::RESET . TextFormat::YELLOW . "Reward Min: " . Main::getInstance()->getCountMin();
+            $lore[] = TextFormat::RESET . TextFormat::YELLOW . "Reward Max: " . Main::getInstance()->getCountMax();
             $lore[] = "";
             $lore[] = TextFormat::RESET . TextFormat::GRAY . "Click to open reward.";
             $item->setLore($lore);
@@ -45,7 +45,7 @@ class EventListener implements Listener {
             $level->dropItem($player, $item);
             $level->addParticle(new HugeExplodeSeedParticle($player));
             $level->addSound(new BlazeShootSound($player));
-            $titles = MineR::getTitles();
+            $titles = Main::getTitles();
             $player->addTitle(TextFormat::BOLD . TextFormat::AQUA . $titles[array_rand($titles)],
                 TextFormat::GRAY . "You have found a reward from mining!");
         }
