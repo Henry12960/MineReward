@@ -50,8 +50,8 @@ class AnimationTask extends Task {
                 $this->player->sendMessage(str_replace("&", TextFormat::ESCAPE, $reward[1]));
             }
         }
-        $this->item->getLevel()->addParticle(new HugeExplodeSeedParticle($this->item));
-        $this->item->getLevel()->broadcastLevelSoundEvent($this->item, LevelSoundEventPacket::SOUND_EXPLODE);
+        $this->item->getWorld()->addParticle(new HugeExplodeSeedParticle($this->item));
+        $this->item->getWorld()->broadcastLevelSoundEvent($this->item, LevelSoundEventPacket::SOUND_EXPLODE);
         $this->item->flagForDespawn();
     }
 }
