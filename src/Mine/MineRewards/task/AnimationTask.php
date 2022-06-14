@@ -2,13 +2,13 @@
 
 namespace Mine\MineRewards\task;
 
-use Mine\MineRewards\MineR;
+use Mine\MineRewards\Main;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\entity\object\ItemEntity;
 use pocketmine\item\Item;
 use pocketmine\level\particle\HugeExplodeSeedParticle;
 use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\scheduler\Task;
 use pocketmine\utils\TextFormat;
 
@@ -35,12 +35,12 @@ class AnimationTask extends Task {
      * @param int $currentTick
      */
     public function onRun(int $currentTick) {
-        $amount = mt_rand(MineR::getInstance()->getCountMin(), MineR::getInstance()->getCountMax());
+        $amount = mt_rand(MineR::getInstance()->getCountMin(), Main::getInstance()->getCountMax());
         $rewards = MineR::getInstance()->getRewards();
         for($i = 0; $i < $amount; $i++) {
             $reward = $rewards[array_rand($rewards)];
             if($reward instanceof Item) {
-                $this->item->getLevel()->dropItem($this->item, $reward);
+                $this->item->getWorld()->dropItem($this->item, $reward);
                 continue;
             }
             $reward = explode(":", $reward);
