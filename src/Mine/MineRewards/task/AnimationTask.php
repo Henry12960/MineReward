@@ -34,7 +34,7 @@ class AnimationTask extends Task {
     /**
      * @param int $currentTick
      */
-    public function onRun(int $currentTick) {
+    public function onRun(int $currentTick) : void {
         $amount = mt_rand(Main::getInstance()->getCountMin(), Main::getInstance()->getCountMax());
         $rewards = Main::getInstance()->getRewards();
         for($i = 0; $i < $amount; $i++) {
