@@ -43,7 +43,7 @@ class TickTask extends Task {
      */
     public function onRun(int $currentTick) {
         $this->runs++;
-        $scheduler = MineR::getInstance()->getScheduler();
+        $scheduler = Main::getInstance()->getScheduler();
         if($this->entity->isClosed()) {
             $this->owner->getInventory()->addItem($this->entity->getItem());
             $this->owner->sendMessage(Main::getPrefix() . TextFormat::RED . "Error occurred when using reward! It has been returned to your inventory!");
