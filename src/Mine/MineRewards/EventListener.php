@@ -8,6 +8,7 @@ use pocketmine\event\Listener;
 use pocketmine\level\particle\HugeExplodeSeedParticle;
 use pocketmine\level\sound\BlazeShootSound;
 use pocketmine\utils\TextFormat;
+use pocketmine\player\Player
 
 class EventListener implements Listener {
 
@@ -33,7 +34,7 @@ class EventListener implements Listener {
         }
         if(mt_rand(1, $this->plugin->getChance()) === mt_rand(1, $this->plugin->getChance())) {
             $player = $event->getPlayer();
-            $level = $player->getWorld();
+            $level = $player->getWorld()->getFolderName();
             $item = new Reward();
             $lore = [];
             $lore[] = TextFormat::RESET . TextFormat::YELLOW . "Reward Min: " . MineR::getInstance()->getCountMin();
