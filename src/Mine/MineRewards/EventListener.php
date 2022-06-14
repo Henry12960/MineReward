@@ -11,13 +11,13 @@ use pocketmine\utils\TextFormat;
 
 class EventListener implements Listener {
 
-    /** @var MineR */
+    /** @var Main */
     private $plugin;
 
     /**
      * EventListener constructor.
      *
-     * @param MineR $plugin
+     * @param Main $plugin
      */
     public function __construct(Main $plugin) {
         $this->plugin = $plugin;
