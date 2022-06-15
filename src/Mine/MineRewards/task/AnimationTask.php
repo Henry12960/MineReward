@@ -6,7 +6,7 @@ use Mine\MineRewards\Main;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\entity\object\ItemEntity;
 use pocketmine\item\Item;
-use pocketmine\level\particle\HugeExplodeSeedParticle;
+use pocketmine\world\particle\HugeExplodeSeedParticle;
 use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
 use pocketmine\player\Player;
 use pocketmine\scheduler\Task;
